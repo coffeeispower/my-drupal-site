@@ -12,6 +12,7 @@
       buildInputs = [
         pkgs.ddev
         pkgs.php
+        pkgs.flyctl
       ];
     };
   });
