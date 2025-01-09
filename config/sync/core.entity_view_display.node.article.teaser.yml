@@ -1,4 +1,4 @@
-uuid: cf5406dd-cdf2-45aa-a1e2-b835b09fa16b
+uuid: 73012827-753e-41c4-9a70-5e24a2895d89
 langcode: en
 status: true
 dependencies:
@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.article.body
     - field.field.node.article.comment
+    - field.field.node.article.feeds_item
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
     - image.style.medium
@@ -53,3 +54,4 @@ content:
     region: content
 hidden:
   comment: true
+  feeds_item: true

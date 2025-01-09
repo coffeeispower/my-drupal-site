@@ -54,4 +54,4 @@ COPY ./docker/apache/drupal.conf /etc/apache2/sites-available/000-default.conf
 COPY ./docker/apache/ports.conf /etc/apache2/ports.conf
 
 # Comando para iniciar o servidor
-CMD ["bash", "-c", "chmod -R 775 /var/www/html/web/sites/default/files && chown -R www-data:www-data /var/www/html/web/sites/default/files; vendor/bin/drush config:import --partial -y & apache2-foreground"]
+CMD ["bash", "-c", "chmod -R 775 /var/www/html/web/sites/default/files && chown -R www-data:www-data /var/www/html/web/sites/default/files; vendor/bin/drush config:set system.site uuid b72d5806-0979-414f-8365-150c94f75459; vendor/bin/drush config:import --partial -y & apache2-foreground"]

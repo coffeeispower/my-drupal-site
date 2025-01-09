@@ -1,4 +1,4 @@
-uuid: f6ddfef1-c23c-4ac6-b65e-3e0123eaba76
+uuid: 5804ffce-9221-4fa1-9fde-9f9fe21be88f
 langcode: en
 status: true
 dependencies:
@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_display.comment.comment.default
     - field.field.node.article.body
     - field.field.node.article.comment
+    - field.field.node.article.feeds_item
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
     - image.style.wide
@@ -62,4 +63,5 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  feeds_item: true
