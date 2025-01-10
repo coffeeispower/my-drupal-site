@@ -111,6 +111,13 @@ mappings:
       language: ''
     unique: {  }
   -
+    target: nid
+    map:
+      value: itemid
+    settings: {  }
+    unique:
+      value: 1
+  -
     target: field_tags
     map:
       target_id: tags_nome

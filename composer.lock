@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "92353005af9dfe7f84ef65f828220972",
+    "content-hash": "eb21a26553dd6d991461bc1ed96eec2a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1830,6 +1830,83 @@
             "homepage": "https://www.drupal.org/project/markdown_easy",
             "support": {
                 "source": "https://git.drupalcode.org/project/markdown_easy"
+            }
+        },
+        {
+            "name": "drupal/pwa",
+            "version": "2.1.0-beta6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/pwa.git",
+                "reference": "2.1.0-beta6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/pwa-2.1.0-beta6.zip",
+                "reference": "2.1.0-beta6",
+                "shasum": "ffcfbf4b672b1fffa1a7a918b940f035c892d92b"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "php": "^8"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.1.0-beta6",
+                    "datestamp": "1724323415",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "AlexBorsody",
+                    "homepage": "https://www.drupal.org/user/473596"
+                },
+                {
+                    "name": "Ambient.Impact",
+                    "homepage": "https://www.drupal.org/user/1131532"
+                },
+                {
+                    "name": "anybody",
+                    "homepage": "https://www.drupal.org/user/291091"
+                },
+                {
+                    "name": "christophweber",
+                    "homepage": "https://www.drupal.org/user/281751"
+                },
+                {
+                    "name": "grevil",
+                    "homepage": "https://www.drupal.org/user/3668491"
+                },
+                {
+                    "name": "nod_",
+                    "homepage": "https://www.drupal.org/user/598310"
+                },
+                {
+                    "name": "rupl",
+                    "homepage": "https://www.drupal.org/user/411999"
+                }
+            ],
+            "description": "Provides progressive web app integration for your Drupal site.",
+            "homepage": "https://www.drupal.org/project/pwa",
+            "keywords": [
+                "Drupal",
+                "Handheld",
+                "Mobile",
+                "PWA",
+                "Progressive Web App"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/pwa",
+                "issues": "https://www.drupal.org/project/issues/pwa"
             }
         },
         {
@@ -7404,6 +7481,7 @@
         "drupal/feeds_ex": 10,
         "drupal/gin": 20,
         "drupal/markdown_easy": 20,
+        "drupal/pwa": 10,
         "drush/drush": 20
     },
     "prefer-stable": false,

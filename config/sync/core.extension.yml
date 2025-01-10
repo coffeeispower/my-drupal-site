@@ -37,6 +37,7 @@ module:
   path: 0
   path_alias: 0
   pgsql: 0
+  pwa: 0
   search: 0
   shortcut: 0
   system: 0
