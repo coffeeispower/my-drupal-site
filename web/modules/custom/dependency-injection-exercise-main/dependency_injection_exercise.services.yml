@@ -1,0 +1,20 @@
+services:
+  plugin.manager.mail:
+    class: Drupal\dependency_injection_exercise\Services\MailManagerService
+    arguments:
+      - '@container.namespaces'
+      - '@cache.discovery'
+      - '@module_handler'
+      - '@config.factory'
+      - '@logger.factory'
+      - '@string_translation'
+      - '@renderer'
+  dependency_injection_exercise.random_photos_service:
+    class: Drupal\dependency_injection_exercise\Services\RandomPhotosService
+    arguments: ['@http_client']
+
+  dependency_injection_exercise.breadcrumbs:
+    class: Drupal\dependency_injection_exercise\BreadcrumbsBuilder
+    arguments: []
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }

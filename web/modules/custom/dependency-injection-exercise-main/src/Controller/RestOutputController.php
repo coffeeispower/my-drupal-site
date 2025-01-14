@@ -2,14 +2,27 @@
 
 namespace Drupal\dependency_injection_exercise\Controller;
 
-use Drupal\Component\Serialization\Json;
 use Drupal\Core\Controller\ControllerBase;
 use GuzzleHttp\Exception\GuzzleException;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\dependency_injection_exercise\Services\RandomPhotosService;
 
 /**
  * Provides the rest output.
  */
 class RestOutputController extends ControllerBase {
+
+  protected $randomPhotosService;
+
+  public function __construct(RandomPhotosService $random_photos_service) {
+    $this->randomPhotosService = $random_photos_service;
+  }
+
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('dependency_injection_exercise.random_photos_service')
+    );
+  }
 
   /**
    * Displays the photos.
@@ -30,9 +43,7 @@ class RestOutputController extends ControllerBase {
 
     // Try to obtain the photo data via the external API.
     try {
-      $response = \Drupal::httpClient()->request('GET', 'https://jsonplaceholder.typicode.com/albums/5/photos');
-      $raw_data = $response->getBody()->getContents();
-      $data = Json::decode($raw_data);
+      $data = $this->randomPhotosService->getRandomPhotos();
     }
     catch (GuzzleException $e) {
       $build['error'] = [
@@ -47,9 +58,9 @@ class RestOutputController extends ControllerBase {
     $build['photos'] = array_map(static function ($item) {
       return [
         '#theme' => 'image',
-        '#uri' => $item['thumbnailUrl'],
-        '#alt' => $item['title'],
-        '#title' => $item['title'],
+        '#uri' => $item['download_url'],
+        // '#alt' => $item['title'],
+        // '#title' => $item['title'],
       ];
     }, $data);
 

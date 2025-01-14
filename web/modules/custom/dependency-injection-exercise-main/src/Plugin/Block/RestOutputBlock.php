@@ -4,7 +4,10 @@ namespace Drupal\dependency_injection_exercise\Plugin\Block;
 
 use Drupal\Component\Serialization\Json;
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\dependency_injection_exercise\Services\RandomPhotosService;
 use GuzzleHttp\Exception\GuzzleException;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Provides a 'RestOutputBlock' block.
@@ -14,8 +17,22 @@ use GuzzleHttp\Exception\GuzzleException;
  *  admin_label = @Translation("Rest output block"),
  * )
  */
-class RestOutputBlock extends BlockBase {
+class RestOutputBlock extends BlockBase implements ContainerFactoryPluginInterface {
 
+  protected $randomPhotosService;
+
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, RandomPhotosService $random_photos_service) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+    $this->randomPhotosService = $random_photos_service;
+  }
+
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+
+    return new static(
+      $configuration, $plugin_id, $plugin_definition,
+      $container->get('dependency_injection_exercise.random_photos_service'),
+    );
+  }
   /**
    * {@inheritdoc}
    */
@@ -29,12 +46,9 @@ class RestOutputBlock extends BlockBase {
         ],
       ],
     ];
-
     // Try to obtain the photo data via the external API.
     try {
-      $response = \Drupal::httpClient()->request('GET', sprintf('https://jsonplaceholder.typicode.com/albums/%s/photos', random_int(1, 20)));
-      $raw_data = $response->getBody()->getContents();
-      $data = Json::decode($raw_data);
+      $data = $this->randomPhotosService->getRandomPhotos();
     }
     catch (GuzzleException $e) {
       $build['error'] = [
@@ -49,9 +63,9 @@ class RestOutputBlock extends BlockBase {
     $build['photos'] = array_map(static function ($item) {
       return [
         '#theme' => 'image',
-        '#uri' => $item['thumbnailUrl'],
-        '#alt' => $item['title'],
-        '#title' => $item['title'],
+        '#uri' => $item['download_url'],
+        // '#alt' => $item['title'],
+        // '#title' => $item['title'],
       ];
     }, $data);
 
