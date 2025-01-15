@@ -1,4 +1,8 @@
 services:
+  language_manager:
+    class: Drupal\dependency_injection_exercise\Services\YourMomLanguageManagerService
+    arguments:
+      - '@language.default'
   plugin.manager.mail:
     class: Drupal\dependency_injection_exercise\Services\MailManagerService
     arguments:
