@@ -20,16 +20,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1736012469,
-        "narHash": "sha256-/qlNWm/IEVVH7GfgAIyP6EsVZI6zjAx1cV5zNyrs+rI=",
-        "owner": "NixOS",
+        "lastModified": 1737378172,
+        "narHash": "sha256-UmX1zf/56aOBf7mU2L/nUHdwrk1t/SLxolFbFS3Cojk=",
+        "owner": "coffeeispower",
         "repo": "nixpkgs",
-        "rev": "8f3e1f807051e32d8c95cd12b9b421623850a34d",
+        "rev": "58173c0ce6bba90980bbd321397fc7d2f7a63cc6",
         "type": "github"
       },
       "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
+        "owner": "coffeeispower",
+        "ref": "fix-buildComposerProject",
         "repo": "nixpkgs",
         "type": "github"
       }

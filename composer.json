@@ -15,7 +15,6 @@
         }
     ],
     "require": {
-        "composer/installers": "^2.3",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-project-message": "^10.0",
         "drupal/core-recommended": "^10.0",
@@ -24,7 +23,8 @@
         "drupal/gin": "^4.0@dev",
         "drupal/markdown_easy": "^1.0@dev",
         "drupal/pwa": "^2.1@beta",
-        "drush/drush": "99.x-dev"
+        "composer/installers": "^2.3",
+        "drush/drush": "13.x-dev"
     },
     "conflict": {
         "drupal/drupal": "*"
