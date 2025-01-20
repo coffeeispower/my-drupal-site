@@ -41,6 +41,5 @@ dist/
 
 
 # Custom Pictonio - project
-/web/.htaccess
 .direnv
 result
