@@ -170,7 +170,7 @@ AddEncoding gzip svgz
     </FilesMatch>
   </IfModule>
 </IfModule>
-#çlskçlgknçelkgn
+
 # Various header fixes.
 <IfModule mod_headers.c>
   # Disable content sniffing for all responses, since it's an attack vector.

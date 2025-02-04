@@ -1,0 +1,6 @@
+_core:
+  default_config_hash: SMIiG6XYB8Uznq_xDWANSJLZiponvBa66V41dX_eFLo
+sensor_call_logging: on_request
+watchdog_logging: false
+cron_run_sensors: false
+disable_sensor_autocreate: false

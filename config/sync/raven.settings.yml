@@ -1,0 +1,52 @@
+_core:
+  default_config_hash: hV4bhqbC5LiJvbdO0pxBI_UQaDlWFNysWF_eclD1fLI
+client_key: 'https://2446b57a63268431dcdd7782deb7afac@o4508455261569024.ingest.us.sentry.io/4508761256099840'
+environment: development
+release: ''
+log_levels:
+  emergency: true
+  alert: true
+  critical: true
+  error: true
+  warning: true
+  notice: true
+  info: true
+  debug: true
+stack: true
+timeout: 2.0
+message_limit: 2048
+trace: true
+fatal_error_handler: true
+fatal_error_handler_memory: 2560
+javascript_error_handler: true
+drush_error_handler: true
+public_dsn: 'https://7151e7846de2f1616e18a13a2b19da1f@o4508455261569024.ingest.us.sentry.io/4508761282314240'
+ssl: verify_ssl
+ca_cert: ''
+ignored_channels: {  }
+ignored_messages: {  }
+send_user_data: true
+rate_limit: 0
+send_request_body: false
+request_tracing: true
+traces_sample_rate: 1.0
+browser_traces_sample_rate: 1.0
+database_tracing: true
+twig_tracing: true
+auto_session_tracking: true
+send_client_reports: true
+drush_tracing: true
+seckit_set_report_uri: false
+send_monitoring_sensor_status_changes: true
+404_tracing: false
+show_report_dialog: false
+error_embed_url: null
+tunnel: true
+modules: true
+cron_monitor_id: ''
+profiles_sample_rate: null
+http_compression: true
+send_inp_spans: true
+trace_propagation_targets_backend: {  }
+trace_propagation_targets_frontend: {  }
+database_tracing_args: true

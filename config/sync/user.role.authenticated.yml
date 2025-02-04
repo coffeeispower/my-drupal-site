@@ -9,6 +9,7 @@ dependencies:
     - contact
     - file
     - filter
+    - raven
     - search
     - shortcut
     - system
@@ -26,5 +27,7 @@ permissions:
   - 'delete own files'
   - 'post comments'
   - 'search content'
+  - 'send javascript errors to sentry'
+  - 'send performance traces to sentry'
   - 'skip comment approval'
   - 'use text format basic_html'

@@ -1,0 +1,20 @@
+uuid: b6d6ac23-4140-46b9-8dc8-ca756f115558
+langcode: en
+status: true
+dependencies:
+  module:
+    - markdown_easy
+id: core_requirements_markdown_easy
+label: 'Module markdown_easy'
+description: 'Requirements of the markdown_easy module'
+category: Requirements
+plugin_id: core_requirements
+result_class: null
+value_label: null
+value_type: no_value
+caching_time: 3600
+settings:
+  module: markdown_easy
+  exclude_keys: {  }
+thresholds:
+  type: none

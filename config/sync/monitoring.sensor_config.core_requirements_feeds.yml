@@ -1,0 +1,20 @@
+uuid: 0d8411d5-d83e-45a9-a5fe-5bd24216d97f
+langcode: en
+status: true
+dependencies:
+  module:
+    - feeds
+id: core_requirements_feeds
+label: 'Module feeds'
+description: 'Requirements of the feeds module'
+category: Requirements
+plugin_id: core_requirements
+result_class: null
+value_label: null
+value_type: no_value
+caching_time: 3600
+settings:
+  module: feeds
+  exclude_keys: {  }
+thresholds:
+  type: none

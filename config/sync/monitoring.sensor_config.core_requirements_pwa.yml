@@ -1,0 +1,20 @@
+uuid: 137824a3-9f9a-4bb0-8a19-5fc76957ba81
+langcode: en
+status: true
+dependencies:
+  module:
+    - pwa
+id: core_requirements_pwa
+label: 'Module pwa'
+description: 'Requirements of the pwa module'
+category: Requirements
+plugin_id: core_requirements
+result_class: null
+value_label: null
+value_type: no_value
+caching_time: 3600
+settings:
+  module: pwa
+  exclude_keys: {  }
+thresholds:
+  type: none

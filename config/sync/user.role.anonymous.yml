@@ -8,6 +8,7 @@ dependencies:
     - comment
     - contact
     - filter
+    - raven
     - search
     - system
 _core:
@@ -21,4 +22,6 @@ permissions:
   - 'access content'
   - 'access site-wide contact form'
   - 'search content'
+  - 'send javascript errors to sentry'
+  - 'send performance traces to sentry'
   - 'use text format restricted_html'

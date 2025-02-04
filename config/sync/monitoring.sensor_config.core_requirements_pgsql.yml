@@ -1,0 +1,20 @@
+uuid: 31587f5f-b650-4cc4-a4df-3cf23838bd96
+langcode: en
+status: true
+dependencies:
+  module:
+    - pgsql
+id: core_requirements_pgsql
+label: 'Module pgsql'
+description: 'Requirements of the pgsql module'
+category: Requirements
+plugin_id: core_requirements
+result_class: null
+value_label: null
+value_type: no_value
+caching_time: 3600
+settings:
+  module: pgsql
+  exclude_keys: {  }
+thresholds:
+  type: none

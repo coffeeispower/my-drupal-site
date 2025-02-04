@@ -30,6 +30,7 @@ module:
   markdown_easy: 0
   menu_link_content: 0
   menu_ui: 0
+  monitoring: 0
   mysql: 0
   node: 0
   options: 0
@@ -38,6 +39,7 @@ module:
   path_alias: 0
   pgsql: 0
   pwa: 0
+  raven: 0
   search: 0
   shortcut: 0
   system: 0
@@ -48,8 +50,9 @@ module:
   user: 0
   views_ui: 0
   views: 10
-  standard: 1000
+  minimal: 1000
 theme:
   olivero: 0
   claro: 0
-profile: standard
+  gin: 0
+profile: minimal
